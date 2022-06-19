@@ -5,6 +5,8 @@ const Users = () => {
     <>
     <div>Users</div>
     <p>Heyy</p>
+    <br />
+    <p>This is another para </p>
     </>
   )
 }
