@@ -19,7 +19,7 @@ import About from './About.js'
 
 export default function BasicExample() {
   return (
-    <Router>
+    <Router basename="/react-cat">
       <div>
         <ul>
           <li>
