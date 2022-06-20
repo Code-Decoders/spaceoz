@@ -20,9 +20,10 @@ h2, p {
 }*/
 .user {
   margin-top: 1.5rem;
-  height: 32rem;
+  max-height: 35rem;
   margin-left: 2rem;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid black;
 }
 .user, p {
     display: inline-block;
@@ -65,4 +66,16 @@ h2, p {
 h2 {
   margin-top: 1.3rem;
   font-size: medium;
+}
+
+@media(max-width:998px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media(max-width:768px) {
+  html {
+    font-size: 45%;
+  }
 }
