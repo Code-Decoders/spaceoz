@@ -1,6 +1,5 @@
 {
-  "name": "react-app",
-  "homepage": "http://NiharikaSngh.github.io/react-cat",
+  "name": "nft-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,6 +45,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "autoprefixer": "^10.4.8",
+    "gh-pages": "^4.0.0",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }

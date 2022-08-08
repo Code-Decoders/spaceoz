@@ -1,0 +1,560 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Reset CSS Ends*/
+
+@import url("http://fonts.cdnfonts.com/css/gilroy-bold");
+
+body {
+  font-family: "Gilroy", sans-serif;
+  background: rgb(11, 10, 36);
+  overflow-x: hidden;
+}
+
+.right {
+  //overflow-x: hidden;
+  //overflow-y: hidden;
+  max-width: 100vw;
+  min-height: 100vh;
+  margin-left: 240px;
+  color: white;
+  background: rgb(11, 10, 36);
+}
+
+.navBar {
+  z-index: 1000;
+  //pointer-events: none;
+  position: fixed;
+  overflow: hidden;
+  width: 240px;
+  min-height: 100vh;
+  background: rgba(32, 30, 67);
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: safe center;
+  margin-left: 84px;
+  margin-right: 67px;
+  margin-top: 53px;
+}
+
+.dp {
+  margin-left: -40px;
+  margin-right: 8px;
+  width: 35px;
+  height: 35px;
+}
+
+.Name {
+  color: white;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 24px;
+}
+
+.child {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.navigate {
+  overflow: hidden;
+  font-family: Gilroy-Medium, sans-serif;
+  font-size: 15px;
+  line-height: 17.58px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.svg {
+  margin-left: 12px;
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+.svg:hover {
+  fill: B7ABFF;
+}
+
+.nav-btn {
+  overflow: hidden;
+  color: #727191;
+  width: 209px;
+  height: 49px;
+}
+
+.nav-btn:hover {
+  color: rgb(183, 171, 255);
+  background: rgb(32, 30, 67);
+  border: 1px solid #000000;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.child {
+  margin-top: 12px;
+}
+
+.text {
+  vertical-align: 3px;
+}
+
+.nav-btn,
+.nav-btn:visited,
+.nav-btn:hover,
+.nav-btn:active,
+.nav-btn:focus {
+  text-decoration: underline;
+  text-decoration-color: rgba(32, 30, 67);
+}
+
+.text,
+.text:visited,
+.text:hover,
+.text:active,
+.text:focus {
+  text-decoration: underline;
+  text-decoration-color: rgba(32, 30, 67);
+}
+
+.money-left {
+  float: left;
+  border-radius: 15px;
+  margin-top: 300px;
+  margin-left: 20px;
+  width: 195px;
+  height: 165px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(134, 140, 255, 1),
+    rgba(67, 24, 255, 1)
+  );
+}
+
+.your {
+  font-family: Gilroy-Medium, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  margin-left: 16px;
+  margin-top: 29px;
+}
+
+.Tez,
+.our-curr {
+  font-size: 24px;
+  line-height: 28px;
+  color: white;
+  font-family: Gilroy-Light, sans-serif;
+  margin-left: 16px;
+}
+
+.par {
+  margin-top: 10px;
+}
+
+.input-div {
+  overflow: hidden;
+  //position: absolute;
+  width: 583px;
+  height: 48px;
+  margin-left: 32px;
+  margin-top: 52px;
+  background: #201e43;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+input[type="text"] {
+  border: none;
+  flex-grow: 1;
+  background: #201e43;
+}
+
+::placeholder {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(236, 235, 246, 0.62);
+}
+
+input[type="text"]:focus {
+  color: rgba(236, 235, 246, 0.62);
+  outline: none;
+  caret-color: rgba(236, 235, 246, 0.62);
+}
+
+.hold1 {
+  margin-left: 20px;
+  margin-right: 15px;
+  margin-top: 15px;
+  height: 20px;
+  width: 20px;
+}
+
+.hold2 {
+  margin-right: 20px;
+  margin-top: 15px;
+  height: 20px;
+  width: 20px;
+}
+
+.img-face {
+  width: 49.52px;
+  height: 49.52px;
+  left: 1302px;
+  top: 42px;
+}
+
+.Top {
+  height: 130px;
+  z-index: 1;
+  min-width: 100vw;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background: rgb(11, 10, 36);
+}
+
+.dp-pic {
+  //background: red;
+  margin-left: 465px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.div-face {
+  margin-right: 20px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.key-name {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ecebf6;
+}
+
+.caret-down {
+  margin-top: 8px;
+  margin-left: 8px;
+  width: 12px;
+  height: 12px;
+}
+
+.Heading {
+  position: absolute;
+  width: 208px;
+  height: 29px;
+  left: 283px;
+  top: 150px;
+  font-family: "Gilroy-medium", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #f5f4fb;
+}
+
+.fixed-ele {
+  display: flex;
+  flex-direction: row;
+}
+
+.hold4 {
+  margin-left: 855px;
+}
+
+.playgame {
+  overflow: hidden;
+  max-width: 100vw;
+  min-height: 100vh;
+  background: rgb(11, 10, 36);
+}
+
+.game-conc {
+  margin-left: 240px;
+}
+
+.card-begin {
+  width: 100vw;
+  position: absolute;
+  //min-width: 252px;
+  height: 355px;
+  left: 283px;
+  top: 205px;
+  background: rgb(11, 10, 36);
+  //background: white;
+  //background: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  overflow: auto;
+  //scrollbar-gutter: stable both-edges;
+  //overflow: overlay;
+  //float: left; clear: left;
+  //white-space: nowrap;
+}
+
+.card {
+  margin-right: 50px;
+  margin-bottom: 50px;
+  width: 252px;
+  min-height: 329px;
+  //left: 283px;
+  //top: 205px;
+  background: #201e43;
+  //background: white;
+  border-radius: 15px;
+}
+
+.img-tag {
+  position: relative;
+  width: 239px;
+  height: 217px;
+  top: 7px;
+  left: 8px;
+  border-radius: 15px;
+}
+
+.random {
+  width: 222px;
+  height: 217px;
+}
+
+.ident {
+  position: absolute;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ecebf7;
+  top: 244px;
+  left: 18px;
+}
+
+.money {
+  top: 282px;
+  left: 52px;
+  position: absolute;
+  font-family: "Gilroy-medium", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #b7abff;
+}
+
+.div-owner {
+  top: 184px;
+  left: 8px;
+  background: rgba(32, 30, 67, 1);
+  position: absolute;
+  width: 59.81px;
+  height: 19px;
+  border-radius: 13px;
+}
+
+.owner {
+  top: 5px;
+  left: 7px;
+  position: absolute;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 11px;
+  color: #d3d1e0;
+}
+
+.vector {
+  position: absolute;
+  top: 279px;
+  left: 16px;
+}
+
+.table-start {
+  position: absolute;
+  top: 600px;
+  min-width: 100vw;
+  min-height: 400px;
+}
+
+.Headin {
+  position: absolute;
+  width: 208px;
+  height: 29px;
+  left: 40px;
+  top: 2px;
+  font-family: "Gilroy-medium", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #f5f4fb;
+}
+
+table {
+  border-collapse: collapse;
+  position: absolute;
+  min-width: 827px;
+  min-height: 301px;
+  left: 40px;
+  top: 70px;
+  background: #201e43;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+td,
+th {
+  //border: 1px solid #dddddd;
+  text-align: left;
+  padding-top: 23px;
+  padding-left: 36px;
+  padding-bottom: 20px;
+  font-family: "Gilroy-medium", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ecebf6;
+}
+
+th {
+  font-weight: 600;
+  color: rgba(236, 235, 246, 0.62);
+  padding-bottom: 5px;
+}
