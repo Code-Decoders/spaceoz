@@ -18,9 +18,9 @@ export default function Inventory() {
             <div className="right">
                 <div className="Top">
                     <div className="input-div">
-                        <img className="hold1" src={photo} alt="not" />
-                        <input className="tag-input" type="text" placeholder="Search Nfts..." />
-                        <img className="hold2" src={fil} alt="not" />
+                            <img className="hold1" src={photo} alt="not" />
+                            <input className="tag-input" type="text" placeholder="Search Nfts..." />
+                            <img className="hold2" src={fil} alt="not" />
                     </div>
                     <Appbar />
                 </div>

@@ -355,6 +355,7 @@ input[type="text"]:focus {
 }
 
 .user-info {
+  //background: white;
   display: flex;
   flex-direction: row;
   margin-top: 10px;
@@ -410,7 +411,7 @@ input[type="text"]:focus {
 }
 
 .card-begin {
-  width: 100vw;
+  width: 1190px;
   position: absolute;
   //min-width: 252px;
   height: 355px;
@@ -424,6 +425,7 @@ input[type="text"]:focus {
   flex-direction: row;
   align-items: start;
   overflow: auto;
+  overflow-y: hidden;
   //scrollbar-gutter: stable both-edges;
   //overflow: overlay;
   //float: left; clear: left;
@@ -434,7 +436,7 @@ input[type="text"]:focus {
   margin-right: 50px;
   margin-bottom: 50px;
   width: 252px;
-  min-height: 329px;
+  height: 329px;
   //left: 283px;
   //top: 205px;
   background: #201e43;
@@ -530,7 +532,7 @@ input[type="text"]:focus {
 table {
   border-collapse: collapse;
   position: absolute;
-  min-width: 827px;
+  width: 1190px;
   min-height: 301px;
   left: 40px;
   top: 70px;
@@ -557,4 +559,45 @@ th {
   font-weight: 600;
   color: rgba(236, 235, 246, 0.62);
   padding-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+.shown {
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  top: 85px;
+  left: 1175px;
+  background: #201e43;
+  color: white;
+  border-radius: 15px;
+}
+
+.write {
+  position: absolute;
+  left: 14px;
+  top: 11px;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 18px;
+  line-height: 14px;
+  color: #ecebf6;
 }
