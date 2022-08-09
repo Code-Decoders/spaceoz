@@ -128,7 +128,7 @@ table {
 @import url("http://fonts.cdnfonts.com/css/gilroy-bold");
 
 body {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy-Medium", sans-serif;
   background: rgb(11, 10, 36);
   overflow-x: hidden;
 }
@@ -600,4 +600,11 @@ th {
   font-size: 18px;
   line-height: 14px;
   color: #ecebf6;
+}
+
+.fas-gye {
+  z-index: 100;
+  min-height: 300px;
+  min-width: 600px;
+  background: white;
 }

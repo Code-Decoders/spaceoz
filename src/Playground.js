@@ -17,11 +17,11 @@ export default function Playground() {
                         <input className="tag-input" type="text" placeholder="Search Nfts..." />
                         <img className="hold2" src={fil} alt="not" />
                     </div>
-                <Appbar />
+                    <Appbar />
+                </div>
+                <div className="Middle">
+                </div>
             </div>
-            <div className="Middle">
-            </div>
-        </div>
         </div >
     );
 }

@@ -6,18 +6,18 @@ import { useEffect, useRef, useState } from "react"
 
 export default function TrendShip() {
     const ref = useRef()
-    const [isShown, setIsShown] = useState(false);
+    const [isShow, setIsShow] = useState(false);
 
     const handleClick = event => {
-        setIsShown(current => !current);
+        setIsShow(current => !current);
     };
 
     useEffect(() => {
         const checkIfClickedOutside = e => {
             // If the menu is open and the clicked target is not within the menu,
             // then close the menu
-            if (isShown && ref.current && !ref.current.contains(e.target)) {
-                setIsShown(false)
+            if (isShow && ref.current && !ref.current.contains(e.target)) {
+                setIsShow(false)
             }
         }
 
@@ -27,7 +27,7 @@ export default function TrendShip() {
             // Cleanup the event listener
             document.removeEventListener("mousedown", checkIfClickedOutside)
         }
-    }, [isShown])
+    }, [isShow])
     return (
         <>
             <div className="card">
@@ -39,7 +39,7 @@ export default function TrendShip() {
                     <span className="money">0.99 ETH</span>
                 </div>
             </div>
-            {isShown && (
+            {isShow && (
                 <div className="fas-gye">
                     <p>HEHEHE</p>
                 </div>
