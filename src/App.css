@@ -598,10 +598,3 @@ th {
   line-height: 14px;
   color: #ecebf6;
 }
-
-.fas-gye {
-  z-index: 100;
-  min-height: 300px;
-  min-width: 600px;
-  background: white;
-}
