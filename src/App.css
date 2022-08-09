@@ -134,8 +134,6 @@ body {
 }
 
 .right {
-  //overflow-x: hidden;
-  //overflow-y: hidden;
   max-width: 100vw;
   min-height: 100vh;
   margin-left: 240px;
@@ -145,9 +143,10 @@ body {
 
 .navBar {
   z-index: 1000;
-  //pointer-events: none;
   position: fixed;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   width: 240px;
   min-height: 100vh;
   background: rgba(32, 30, 67);
@@ -245,7 +244,8 @@ body {
 .money-left {
   float: left;
   border-radius: 15px;
-  margin-top: 300px;
+  margin-top: auto;
+  margin-bottom: 20px;
   margin-left: 20px;
   width: 195px;
   height: 165px;
@@ -280,11 +280,12 @@ body {
 
 .input-div {
   overflow: hidden;
-  //position: absolute;
   width: 583px;
   height: 48px;
   margin-left: 32px;
-  margin-top: 52px;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
   background: #201e43;
   border-radius: 10px;
   display: flex;
@@ -313,14 +314,12 @@ input[type="text"]:focus {
 .hold1 {
   margin-left: 20px;
   margin-right: 15px;
-  margin-top: 15px;
   height: 20px;
   width: 20px;
 }
 
 .hold2 {
   margin-right: 20px;
-  margin-top: 15px;
   height: 20px;
   width: 20px;
 }
@@ -335,7 +334,7 @@ input[type="text"]:focus {
 .Top {
   height: 130px;
   z-index: 1;
-  min-width: 100vw;
+  min-width: calc(100vw - 280px);
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -343,11 +342,10 @@ input[type="text"]:focus {
 }
 
 .dp-pic {
-  //background: red;
-  margin-left: 465px;
+  margin-left: auto;
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
+  align-items: center;
 }
 
 .div-face {
@@ -370,7 +368,6 @@ input[type="text"]:focus {
 }
 
 .caret-down {
-  margin-top: 8px;
   margin-left: 8px;
   width: 12px;
   height: 12px;
@@ -411,7 +408,7 @@ input[type="text"]:focus {
 }
 
 .card-begin {
-  width: 1190px;
+  width: calc(100vw - 300px);
   position: absolute;
   //min-width: 252px;
   height: 355px;
@@ -532,7 +529,7 @@ input[type="text"]:focus {
 table {
   border-collapse: collapse;
   position: absolute;
-  width: 1190px;
+  width: calc(100vw - 330px);
   min-height: 301px;
   left: 40px;
   top: 70px;
