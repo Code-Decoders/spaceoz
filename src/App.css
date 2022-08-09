@@ -334,7 +334,7 @@ input[type="text"]:focus {
 .Top {
   height: 130px;
   z-index: 1;
-  min-width: calc(100vw - 280px);
+  min-width: calc(100vw - 250px);
   position: fixed;
   display: flex;
   flex-direction: row;
