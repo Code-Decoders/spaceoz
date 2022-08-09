@@ -128,7 +128,7 @@ table {
 @import url("http://fonts.cdnfonts.com/css/gilroy-bold");
 
 body {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy-Medium", sans-serif;
   background: rgb(11, 10, 36);
   overflow-x: hidden;
 }
