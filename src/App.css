@@ -156,8 +156,8 @@ body {
   display: flex;
   flex-direction: row;
   align-items: safe center;
-  margin-left: 84px;
-  margin-right: 67px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 53px;
 }
 
@@ -583,7 +583,7 @@ th {
   height: 40px;
   text-align: center;
   top: 85px;
-  left: 1175px;
+  right: 10px;
   background: #201e43;
   color: white;
   border-radius: 15px;

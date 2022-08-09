@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Appbar from "./Appbar";
+import Navbar from "./components/Navbar";
+import Appbar from "./components/Appbar";
 import photo from "./search.png"
 import fil from "./filter.png"
 

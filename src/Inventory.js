@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
 import photo from "./search.png"
 import fil from "./filter.png"
 import face from "./face.png"
 import caret from "./caret-down.png"
 import random from './random.png'
 import vector from './vector.png'
-import Appbar from "./Appbar";
+import Appbar from "./components/Appbar";
 import TrendShip from "./TrendShip";
 
 export default function Inventory() {
