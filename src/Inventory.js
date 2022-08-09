@@ -5,7 +5,6 @@ import fil from "./filter.png"
 import face from "./face.png"
 import caret from "./caret-down.png"
 import random from './random.png'
-import vector from './vector.png'
 import Appbar from "./Appbar";
 import TrendShip from "./TrendShip";
 
@@ -18,9 +17,9 @@ export default function Inventory() {
             <div className="right">
                 <div className="Top">
                     <div className="input-div">
-                            <img className="hold1" src={photo} alt="not" />
-                            <input className="tag-input" type="text" placeholder="Search Nfts..." />
-                            <img className="hold2" src={fil} alt="not" />
+                        <img className="hold1" src={photo} alt="not" />
+                        <input className="tag-input" type="text" placeholder="Search Nfts..." />
+                        <img className="hold2" src={fil} alt="not" />
                     </div>
                     <Appbar />
                 </div>
@@ -42,26 +41,31 @@ export default function Inventory() {
                     <div className="table-box">
                         <table>
                             <tbody><tr>
+                                <th>S No</th>
                                 <th>Company</th>
                                 <th>Contact</th>
                                 <th>Country</th>
                             </tr>
                                 <tr>
+                                    <td>1</td>
                                     <td>Alfreds Futterkiste</td>
                                     <td>Maria Anders</td>
                                     <td>Germany</td>
                                 </tr>
                                 <tr>
+                                    <td>1</td>
                                     <td>Centro comercial Moctezuma</td>
                                     <td>Francisco Chang</td>
                                     <td>Mexico</td>
                                 </tr>
                                 <tr>
+                                    <td>1</td>
                                     <td>Ernst Handel</td>
                                     <td>Roland Mendel</td>
                                     <td>Austria</td>
                                 </tr>
                                 <tr>
+                                    <td>1</td>
                                     <td>Island Trading</td>
                                     <td>Helen Bennett</td>
                                     <td>UK</td>

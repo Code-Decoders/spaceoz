@@ -1,7 +1,8 @@
 import React from "react";
 import logo from './boy.png';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 export default function Navbar() {
+
     return (
         <>
             <div className="navBar">
@@ -38,7 +39,7 @@ export default function Navbar() {
                     <div className="your">Your Balance</div>
                     <div className="par">
                         <div className="Tez">9.04 XTZ</div>
-                        <div className="our-curr">9.04 SPACEOZ</div>
+                        <div className="our-curr">9.04 SPCOZ</div>
                     </div>
                 </div>
             </div>
