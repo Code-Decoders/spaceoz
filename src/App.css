@@ -354,15 +354,16 @@ input[type="text"]:focus {
 
 .user-info {
   //background: white;
+  min-width: 200px;
+  min-height: 70px;
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
-  margin-right: 10px;
+  align-items: center;
 }
 
 .key-name {
   font-family: "Gilroy-Medium", sans-serif;
-  font-size: 14px;
+  font-size: 29px;
   line-height: 16px;
   color: #ecebf6;
 }
@@ -587,7 +588,7 @@ th {
   position: absolute;
   top: 275px;
   width: 230px;
-  //height: 50px;
+  //background: white;
   display: flex;
   flex-direction: row;
   font-family: "Gilroy-Medium", sans-serif;
@@ -599,26 +600,33 @@ th {
 }
 
 .tez {
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: white;
   min-width: 90px;
   height: 37px;
   background: white;
   border-radius: 10px;
   color: black;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .tez:hover {
   background: #201e43;
+  border-width: 0px;
   color: white;
-  transition-delay: ;
 }
 
 .orz {
+  border-style: solid;
   min-width: 90px;
   height: 37px;
+  background: #201e43;
   border-radius: 10px;
   border-width: 2px;
   border-color: white;
+  color: white;
 }
 
 .orz:hover {
