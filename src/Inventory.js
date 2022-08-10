@@ -66,7 +66,7 @@ export default function Inventory() {
                   <td>
                     <div className="btn-grp">
                       <button className="tez">0.99 XTZ</button>
-                      <button className="orz">0.99 SPCZ</button>
+                      <button className="orz">0.99 SPZ</button>
                     </div>
                   </td>
                   <td>0</td>
@@ -81,7 +81,7 @@ export default function Inventory() {
                   <td>
                     <div className="btn-grp">
                       <button className="tez">0.99 XTZ</button>
-                      <button className="orz">0.99 SPCZ</button>
+                      <button className="orz">0.99 SPZ</button>
                     </div>
                   </td>
                   <td>0</td>
@@ -96,7 +96,7 @@ export default function Inventory() {
                   <td>
                     <div className="btn-grp">
                       <button className="tez">0.99 XTZ</button>
-                      <button className="orz">0.99 SPCZ</button>
+                      <button className="orz">0.99 SPZ</button>
                     </div>
                   </td>
                   <td>0</td>
@@ -111,7 +111,7 @@ export default function Inventory() {
                   <td>
                     <div className="btn-grp">
                       <button className="tez">0.99 XTZ</button>
-                      <button className="orz">0.99 SPCZ</button>
+                      <button className="orz">0.99 SPZ</button>
                     </div>
                   </td>
                   <td>0</td>

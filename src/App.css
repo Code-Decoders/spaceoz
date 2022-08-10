@@ -125,7 +125,6 @@ table {
 
 /*Reset CSS Ends*/
 
-
 body {
   font-family: "Gilroy-Medium", sans-serif;
   background: rgb(11, 10, 36);
@@ -367,9 +366,14 @@ input[type="text"]:focus {
 .key-name {
   padding: 10px;
   font-family: "Gilroy-Medium", sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   line-height: 16px;
   color: #ecebf6;
+  cursor: pointer;
+}
+
+.key-name:active {
+  cursor: progress;
 }
 
 .caret-down {
@@ -533,7 +537,7 @@ td {
   padding-top: 23px;
   padding-bottom: 20px;
   padding-left: 20px;
-  font-family: "Gilroy-Light", sans-serif;
+  font-family: "Gilroy-Medium", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -550,6 +554,8 @@ th {
 
 ::-webkit-scrollbar {
   width: 20px;
+  width: 0.5em;
+  height: 0.5em;
 }
 
 ::-webkit-scrollbar-track {
@@ -560,7 +566,7 @@ th {
   background-color: #d6dee1;
   border-radius: 20px;
   border: 6px solid transparent;
-  background-clip: content-box;
+  background-clip: border-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -615,6 +621,7 @@ th {
   background: white;
   border-radius: 10px;
   color: black;
+  margin-right: 15px;
 }
 
 .tez:active {
@@ -653,4 +660,8 @@ th {
 .btn-grp {
   display: flex;
   flex-direction: row;
+}
+
+.fix {
+  margin-right: 15px;
 }
