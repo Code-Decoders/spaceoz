@@ -125,7 +125,6 @@ table {
 
 /*Reset CSS Ends*/
 
-@import url("http://fonts.cdnfonts.com/css/gilroy-bold");
 
 body {
   font-family: "Gilroy-Medium", sans-serif;
@@ -225,7 +224,6 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-  //line-height: 17px;
 }
 
 .nav-btn,
@@ -359,7 +357,6 @@ input[type="text"]:focus {
 }
 
 .user-info {
-  //background: white;
   min-width: 200px;
   min-height: 70px;
   display: flex;
@@ -418,23 +415,16 @@ input[type="text"]:focus {
 .card-begin {
   width: calc(100vw - 300px);
   position: absolute;
-  //min-width: 252px;
   height: 355px;
   left: 283px;
   top: 205px;
   background: rgb(11, 10, 36);
-  //background: white;
-  //background: white;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
   align-items: start;
   overflow: auto;
   overflow-y: hidden;
-  //scrollbar-gutter: stable both-edges;
-  //overflow: overlay;
-  //float: left; clear: left;
-  //white-space: nowrap;
 }
 
 .card {
@@ -442,10 +432,7 @@ input[type="text"]:focus {
   margin-bottom: 50px;
   width: 252px;
   height: 329px;
-  //left: 283px;
-  //top: 205px;
   background: #201e43;
-  //background: white;
   border-radius: 15px;
 }
 
@@ -529,7 +516,6 @@ table {
 }
 
 th {
-  //border: 1px solid #dddddd;
   display: border-box;
   text-align: left;
   padding-top: 23px;
@@ -543,7 +529,7 @@ th {
 }
 
 td {
-  vertical-align: top;
+  vertical-align: middle;
   padding-top: 23px;
   padding-bottom: 20px;
   padding-left: 20px;
@@ -608,7 +594,6 @@ th {
   position: absolute;
   top: 275px;
   width: 230px;
-  //background: white;
   display: flex;
   flex-direction: row;
   font-family: "Gilroy-Medium", sans-serif;
