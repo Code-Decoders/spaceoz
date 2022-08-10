@@ -221,6 +221,11 @@ body {
 
 .text {
   vertical-align: 3px;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  //line-height: 17px;
 }
 
 .nav-btn,
@@ -282,7 +287,7 @@ body {
   overflow: hidden;
   width: 583px;
   height: 48px;
-  margin-left: 32px;
+  margin-left: 44px;
   margin-top: auto;
   margin-bottom: auto;
   align-items: center;
@@ -362,6 +367,7 @@ input[type="text"]:focus {
 }
 
 .key-name {
+  padding: 10px;
   font-family: "Gilroy-Medium", sans-serif;
   font-size: 29px;
   line-height: 16px;
@@ -378,7 +384,7 @@ input[type="text"]:focus {
   position: absolute;
   width: 208px;
   height: 29px;
-  left: 283px;
+  left: 286px;
   top: 150px;
   font-family: "Gilroy-medium", sans-serif;
   font-style: normal;
@@ -499,7 +505,7 @@ input[type="text"]:focus {
   position: absolute;
   width: 208px;
   height: 29px;
-  left: 40px;
+  left: 42px;
   top: 2px;
   font-family: "Gilroy-medium", sans-serif;
   font-style: normal;
@@ -616,6 +622,7 @@ th {
   background: #201e43;
   border-width: 0px;
   color: white;
+  transition-delay: 0.25s;
 }
 
 .orz {
@@ -631,4 +638,15 @@ th {
 
 .orz:hover {
   border-width: 0px;
+  transition-delay: 0.15s;
+}
+
+.hide {
+  color: #201e43;
+}
+
+.mak-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
