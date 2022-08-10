@@ -85,9 +85,6 @@ export default function Appbar() {
               <div
                 className="shown"
                 onClick={handleLogin}
-                style={{
-                  backgroundColor: "white",
-                }}
               >
                 <p className="write">Logout</p>
               </div>

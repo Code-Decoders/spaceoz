@@ -6,7 +6,7 @@ import face from "./face.png"
 import caret from "./caret-down.png"
 import random from './random.png'
 import vector from './vector.png'
-import Appbar from "./Appbar";
+import Appbar from "./components/Appbar";
 import TrendShip from "./TrendShip";
 
 export default function Inventory() {
