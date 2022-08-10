@@ -21,6 +21,7 @@ export default function Navbar() {
 
   const getUserBalance = () => {
     getActiveAccount().then((account) => {
+      if (!account) return;
       getBalance().then((balance) => {
         console.log(balance);
         if (balance != xtz) setXtz(balance);
