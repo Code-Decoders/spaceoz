@@ -1,8 +1,38 @@
 import React, { useEffect, useState } from "react";
 import logo from "../boy.png";
 import { Link } from "react-router-dom";
+import {
+  getBalance,
+  getIGTContractStorage,
+  getActiveAccount,
+} from "../adapters/tezos";
+import { BigNumber } from "bignumber.js";
 
-export default function Navbar() {;
+export default function Navbar() {
+  const [xtz, setXtz] = useState(0);
+  const [token, setToken] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+    getActiveAccount().then((account) => {
+      getBalance().then((balance) => {
+        console.log(balance);
+        if (balance != xtz) setXtz(balance);
+        getIGTContractStorage().then((storage) => {
+          storage.ledger
+            .get({
+              0: account.address,
+              1: "0",
+            })
+            .then((result) => {
+              console.log(result);
+              setToken(`${BigNumber(result).toNumber()} SPCOZ`);
+            });
+        });
+      });
+    });
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -89,8 +119,8 @@ export default function Navbar() {;
         <div className="money-left">
           <div className="your">Your Balance</div>
           <div className="par">
-            <div className="Tez">9.04 XTZ</div>
-            <div className="our-curr">9.04 SPACEOZ</div>
+            <div className="Tez">{xtz}</div>
+            <div className="our-curr">{token}</div>
           </div>
         </div>
       </div>

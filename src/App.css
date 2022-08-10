@@ -346,6 +346,7 @@ input[type="text"]:focus {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 10px;
 }
 
 .div-face {
@@ -363,7 +364,7 @@ input[type="text"]:focus {
 
 .key-name {
   font-family: "Gilroy-Medium", sans-serif;
-  font-size: 29px;
+  font-size: 20px;
   line-height: 16px;
   color: #ecebf6;
 }
