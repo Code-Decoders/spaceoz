@@ -12,7 +12,14 @@ export default function Navbar() {
   const [xtz, setXtz] = useState(0);
   const [token, setToken] = useState(0);
   useEffect(() => {
+    getBalance();
     const interval = setInterval(() => {
+      getBalance();
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const getBalance = () => {
     getActiveAccount().then((account) => {
       getBalance().then((balance) => {
         console.log(balance);
@@ -30,9 +37,7 @@ export default function Navbar() {
         });
       });
     });
-    }, 30000);
-    return () => clearInterval(interval);
-  }, []);
+  };
 
   return (
     <>
