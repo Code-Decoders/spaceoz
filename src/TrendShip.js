@@ -13,7 +13,7 @@ export default function TrendShip() {
                     <div className="div-owner"><span className="owner">10 Owners</span></div>
                     <div className="dove">
                         <button className="tez">0.99 XTZ</button>
-                        <button className="orz">0.99 SPCOZ</button>
+                        <button className="orz">0.99 SPCZ</button>
                     </div>
                 </div>
             </div>

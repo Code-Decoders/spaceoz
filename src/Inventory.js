@@ -8,6 +8,7 @@ import random from './random.png'
 import vector from './vector.png'
 import Appbar from "./components/Appbar";
 import TrendShip from "./TrendShip";
+import Img from './Img.png'
 
 export default function Inventory() {
     return (
@@ -42,34 +43,51 @@ export default function Inventory() {
                     <div className="table-box">
                         <table>
                             <tbody><tr>
-                                <th>S No</th>
-                                <th>Company</th>
-                                <th>Contact</th>
-                                <th>Country</th>
+                                <th className="hide">SNo</th>
+                                <th className="down">Collection</th>
+                                <th>Features</th>
+                                <th>Buy</th>
+                                <th>Owners</th>
                             </tr>
                                 <tr>
                                     <td>1</td>
-                                    <td>Alfreds Futterkiste</td>
+                                    <td className="mak-flex"><img className="fix" src={Img} alt="no"></img> <p>Bullet 1</p></td>
                                     <td>Maria Anders</td>
-                                    <td>Germany</td>
+                                    <td><div className="btn-grp">
+                                        <button className="tez">0.99 XTZ</button>
+                                        <button className="orz">0.99 SPCZ</button>
+                                    </div></td>
+                                    <td>0</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Centro comercial Moctezuma</td>
+                                    <td>2</td>
+                                    <td className="mak-flex"><img className="fix" src={Img} alt="no"></img> <p>Bullet 2</p></td>
                                     <td>Francisco Chang</td>
-                                    <td>Mexico</td>
+                                    <td><div className="btn-grp">
+                                        <button className="tez">0.99 XTZ</button>
+                                        <button className="orz">0.99 SPCZ</button>
+                                    </div></td>
+                                    <td>0</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Ernst Handel</td>
+                                    <td>3</td>
+                                    <td className="mak-flex"><img className="fix" src={Img} alt="no"></img> <p>Bullet 3</p></td>
                                     <td>Roland Mendel</td>
-                                    <td>Austria</td>
+                                    <td><div className="btn-grp">
+                                        <button className="tez">0.99 XTZ</button>
+                                        <button className="orz">0.99 SPCZ</button>
+                                    </div></td>
+                                    <td>0</td>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Island Trading</td>
+                                    <td>4</td>
+                                    <td className="mak-flex"><img className="fix" src={Img} alt="no"></img> <p>Bullet 4</p></td>
                                     <td>Helen Bennett</td>
-                                    <td>UK</td>
+                                    <td><div className="btn-grp">
+                                        <button className="tez">0.99 XTZ</button>
+                                        <button className="orz">0.99 SPCZ</button>
+                                    </div></td>
+                                    <td>0</td>
                                 </tr>
                             </tbody></table>
                     </div>

@@ -221,6 +221,11 @@ body {
 
 .text {
   vertical-align: 3px;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  //line-height: 17px;
 }
 
 .nav-btn,
@@ -282,7 +287,7 @@ body {
   overflow: hidden;
   width: 583px;
   height: 48px;
-  margin-left: 32px;
+  margin-left: 44px;
   margin-top: auto;
   margin-bottom: auto;
   align-items: center;
@@ -363,6 +368,7 @@ input[type="text"]:focus {
 }
 
 .key-name {
+  padding: 10px;
   font-family: "Gilroy-Medium", sans-serif;
   font-size: 20px;
   line-height: 16px;
@@ -379,7 +385,7 @@ input[type="text"]:focus {
   position: absolute;
   width: 208px;
   height: 29px;
-  left: 283px;
+  left: 286px;
   top: 150px;
   font-family: "Gilroy-medium", sans-serif;
   font-style: normal;
@@ -500,7 +506,7 @@ input[type="text"]:focus {
   position: absolute;
   width: 208px;
   height: 29px;
-  left: 40px;
+  left: 42px;
   top: 2px;
   font-family: "Gilroy-medium", sans-serif;
   font-style: normal;
@@ -522,7 +528,6 @@ table {
   border-radius: 15px;
 }
 
-td,
 th {
   //border: 1px solid #dddddd;
   display: border-box;
@@ -532,12 +537,26 @@ th {
   padding-left: 20px;
   font-family: "Gilroy-medium", sans-serif;
   font-style: normal;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 17px;
   color: #ecebf6;
 }
 
+td {
+  vertical-align: top;
+  padding-top: 23px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  font-family: "Gilroy-Light", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 16px;
+  color: #ecebf6;
+}
+
 th {
+  vertical-align: top;
   font-weight: 600;
   color: rgba(236, 235, 246, 0.62);
   padding-bottom: 5px;
@@ -601,6 +620,7 @@ th {
 }
 
 .tez {
+  cursor: pointer;
   border-style: solid;
   border-radius: 10px;
   border-width: 2px;
@@ -610,16 +630,16 @@ th {
   background: white;
   border-radius: 10px;
   color: black;
-  //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.tez:hover {
+.tez:active {
   background: #201e43;
   border-width: 0px;
   color: white;
 }
 
 .orz {
+  cursor: pointer;
   border-style: solid;
   min-width: 90px;
   height: 37px;
@@ -630,6 +650,22 @@ th {
   color: white;
 }
 
-.orz:hover {
+.orz:active {
+  cursor: pointer;
   border-width: 0px;
+}
+
+.hide {
+  color: #201e43;
+}
+
+.mak-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-grp {
+  display: flex;
+  flex-direction: row;
 }
