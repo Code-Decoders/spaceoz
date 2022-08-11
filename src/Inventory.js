@@ -32,8 +32,8 @@ export default function Inventory() {
         <div className="Middle">
           <span className="Heading">Trending Warships</span>
           <div className="card-begin">
-            <TrendShip />
-            <TrendShip />
+            <TrendShip value="true"/>
+            <TrendShip value="true"/>
             <TrendShip />
             <TrendShip />
             <TrendShip />
