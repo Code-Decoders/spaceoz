@@ -44,7 +44,7 @@ export default function Appbar() {
       // If the menu is open and the clicked target is not within the menu,
       // then close the menu
       if (isShown && ref.current && !ref.current.contains(e.target)) {
-        setIsShown(false);
+        //setIsShown(false);
       }
     };
 
