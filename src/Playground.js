@@ -72,7 +72,6 @@ export default function Playground() {
                             </div>
                         )}
                         <Unity ref={ref} className="unity" unityProvider={unityProvider} devicePixelRatio={16 / 9} style={{ height: 'calc(100vh - 135px)', aspectRatio: "16/9", overflow: "hidden" }} />
-                        <button onClick={unload}>Unload</button>
                     </div>
                 </div>
             </div>
