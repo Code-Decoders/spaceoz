@@ -23,7 +23,7 @@ export default function TrendShip(props) {
                 ) : (
                     <div className="img-tag">
                         <img className="random" src={random} alt="not shown"></img>
-                        <span className="ident">Abstrac Girl</span>
+                        <span className="ident">Vanquisher</span>
                         <div className="div-owner"><span className="owner">10 Owners</span></div>
                         <div className="dove">
                             <button className="tez">0.99 XTZ</button>
