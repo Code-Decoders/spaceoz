@@ -32,8 +32,8 @@ export default function Inventory() {
         <div className="Middle">
           <span className="Heading">Trending Warships</span>
           <div className="card-begin">
-            <TrendShip />
-            <TrendShip />
+            <TrendShip value="true"/>
+            <TrendShip value="true"/>
             <TrendShip />
             <TrendShip />
             <TrendShip />
@@ -58,10 +58,10 @@ export default function Inventory() {
                   <td>1</td>
                   <td className="mak-flex">
                     <img className="fix" src={Img} alt="no"></img>{" "}
-                    <p>Bullet 1</p>
+                    <p>Engine Alpha</p>
                   </td>
                   <td>
-                    <div className="btn-grp">Maria Anders</div>
+                    <div className="btn-grp">37 million HP</div>
                   </td>
                   <td>
                     <div className="btn-grp">
