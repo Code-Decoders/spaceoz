@@ -360,7 +360,7 @@ input[type="text"]:focus {
   min-height: 70px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center; 
 }
 
 .key-name {
@@ -378,8 +378,9 @@ input[type="text"]:focus {
 
 .caret-down {
   margin-left: 8px;
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 .Heading {
@@ -575,11 +576,11 @@ th {
 
 .shown {
   position: absolute;
-  width: 90px;
-  height: 40px;
-  text-align: center;
+  width: 145px;
+  height: 60px;
+  //text-align: center;
   margin: auto;
-  top: 85px;
+  top: 90px;
   right: 10px;
   background: #201e43;
   color: white;
@@ -588,12 +589,13 @@ th {
 
 .write {
   position: absolute;
-  left: 14px;
-  top: 11px;
+  left: 30px;
+  top: 20px;
   font-family: "Gilroy-Medium", sans-serif;
-  font-size: 18px;
+  font-size: 27px;
   line-height: 14px;
   color: #ecebf6;
+  cursor: pointer;
 }
 
 .dove {
@@ -664,4 +666,8 @@ th {
 
 .fix {
   margin-right: 15px;
+}
+
+.table-box {
+  margin-bottom: 340px;
 }
