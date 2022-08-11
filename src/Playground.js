@@ -54,7 +54,7 @@ export default function Playground() {
                 <Navbar />
             </div>
             <div className="right">
-                <div className="Top">
+                <div className="Top" style={{ position: "sticky" }}>
                     <div className="input-div">
                         <img className="hold1" src={photo} alt="not" />
                         <input className="tag-input" type="text" placeholder="Search Nfts..." />
