@@ -7,7 +7,7 @@ export default function TrendShip(props) {
     return (
         <>
             <div className="card">
-                {props.value == "true" ? (
+                {props.value === "true" ? (
                     <div className="img-tag" style={{ overflow: "hidden" }}>
                         <div className="diag">
                             <span className="rit">Coming Soon</span>
