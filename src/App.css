@@ -477,9 +477,9 @@ input[type="text"]:focus {
 }
 
 .owner {
-  //top: 5px;
-  //left: 7px;
-  //position: absolute;
+  top: 5px;
+  left: 7px;
+  position: absolute;
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 600;
