@@ -337,7 +337,7 @@ input[type="text"]:focus {
   height: 130px;
   z-index: 1;
   min-width: calc(100vw - 250px);
-  position: fixed;
+  position: sticky;
   display: flex;
   flex-direction: row;
   background: rgb(11, 10, 36);
@@ -578,7 +578,7 @@ th {
   position: absolute;
   width: 145px;
   height: 60px;
-  //text-align: center;
+  text-align: center;
   margin: auto;
   top: 90px;
   right: 10px;

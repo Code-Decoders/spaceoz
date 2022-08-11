@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import Inventory from './Inventory'
-import Playground from './Playground'
+import PlayGround from './Playground'
 
 export default function App() {
 
@@ -16,7 +16,7 @@ export default function App() {
           element={<Inventory />}
         />
         <Route path="/playground"
-          element={<Playground />}
+          element={<PlayGround />}
         />
       </Routes>
     </Router>
