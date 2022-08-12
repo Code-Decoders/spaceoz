@@ -118,7 +118,7 @@ export default function Playground() {
                                 <p>Loading... ({loadingPercentage}%)</p>
                             </div>
                         )}
-                        {!loading && <Unity className="unity" unityProvider={unityProvider} style={{ width: "calc(100% - 220px)", aspectRatio: "16/9", overflow: "hidden" }} />}
+                        {!loading && <Unity className="unity" unityProvider={unityProvider} style={{ width: "calc(100% - 100px)", aspectRatio: "16/9", overflow: "hidden" }} />}
                     </div>
                 </div>
             </div>
