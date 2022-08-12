@@ -43,6 +43,7 @@ export default function Playground() {
                     1: "0",
                 }).then(val => {
                     var coins = BigNumber(val).toNumber()
+                    setCoins(coins)
                 })
         }
 
