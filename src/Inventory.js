@@ -14,9 +14,10 @@ import {
   buyItemWithXTZ,
   getActiveAccount,
   getInventoryContractStorage,
+  minSPZTokens,
 } from "./adapters/tezos";
 import { bytes2Char } from "@taquito/utils";
-import { packDataBytes, unpackDataBytes } from "@taquito/michel-codec";
+import {  unpackDataBytes } from "@taquito/michel-codec";
 
 export default function Inventory() {
   const [ships, setShips] = useState([]);
@@ -25,8 +26,9 @@ export default function Inventory() {
     getGameData();
   }, []);
 
-  const handleBuyXTZ = async (bullet) => {
-    await buyItemWithXTZ(bullet.price, bullet.token_id);
+  const handleBuyXTZ = async () => {
+    minSPZTokens(10, 'tz1eHDxGHWcyobNnocRVeQUHhpYrM1kBtYTx')
+    // await buyItemWithXTZ(bullet.price, bullet.token_id);
   };
   const handleBuySPZ = async (bullet) => {
     await buyItemWithSPZ(bullet.price / 10000, bullet.token_id);
