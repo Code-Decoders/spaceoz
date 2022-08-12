@@ -128,7 +128,16 @@ export default function Navbar({ stateChanger, notify }) {
               </div>
             </div>
           </Link>
-          <Link to="/playground">
+          <Link
+            to="/playground"
+            onClick={async () => {
+              const account = await getActiveAccount();
+              if (!account) {
+                window.alert("Please Connect Your wallet To Play the Game");
+                window.history.back();
+              }
+            }}
+          >
             <div className="nav-btn" style={b()}>
               <div className="child">
                 <svg

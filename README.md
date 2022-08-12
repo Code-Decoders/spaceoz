@@ -22,7 +22,7 @@ Live Website (https://spaceoz.netlify.app/)
 
 Youtube Video Demo
 
-[![Youtube Video](https://i.imgur.com/FwOohGE.png)](https://youtu.be/lDsqZ17JIBc)
+[![Youtube Video](https://i.imgur.com/FwOohGE.png)](https://youtu.be/onvs27YylLY)
 
 
 
