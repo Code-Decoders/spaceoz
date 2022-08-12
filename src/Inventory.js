@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import photo from "./search.png";
 import fil from "./filter.png";
@@ -9,8 +9,59 @@ import vector from "./vector.png";
 import Appbar from "./components/Appbar";
 import TrendShip from "./TrendShip";
 import Img from "./Img.png";
+import {
+  buyItemWithSPZ,
+  buyItemWithXTZ,
+  getActiveAccount,
+  getInventoryContractStorage,
+} from "./adapters/tezos";
+import { bytes2Char } from "@taquito/utils";
+import { packDataBytes, unpackDataBytes } from "@taquito/michel-codec";
 
 export default function Inventory() {
+  const [ships, setShips] = useState([]);
+  const [bullets, setBullets] = useState([]);
+  useEffect(() => {
+    getGameData();
+  }, []);
+
+  const handleBuyXTZ = async (bullet) => {
+    await buyItemWithXTZ(bullet.price, bullet.token_id);
+  };
+  const handleBuySPZ = async (bullet) => {
+    await buyItemWithSPZ(bullet.price / 10000, bullet.token_id);
+  };
+
+  const getGameData = () => {
+    const ids = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    getInventoryContractStorage().then((storage) => {
+      const meta = storage.token_metadata;
+      ids.forEach((item) => {
+        storage.ledger.get(`${item}`).then((l) =>
+          meta.get(`${item}`).then((result) => {
+            const src = { bytes: result.token_info.get("price") };
+            const typ = {
+              prim: "nat",
+            };
+            const _data = {
+              name: bytes2Char(result.token_info.get("name")),
+              url: bytes2Char(result.token_info.get("url")),
+              price: parseInt(unpackDataBytes(src, typ).int),
+              token_id: item,
+              owners: l.length,
+            };
+            if (item < 6) {
+              setShips((ships) => [...ships, _data]);
+            } else {
+              setBullets((bullets) => [...bullets, _data]);
+            }
+            console.log(_data);
+          })
+        );
+      });
+    });
+  };
   return (
     <div className="inven-page">
       <div className="left">
@@ -32,14 +83,11 @@ export default function Inventory() {
         <div className="Middle">
           <span className="Heading">Trending Warships</span>
           <div className="card-begin">
-            <TrendShip value="true" />
-            <TrendShip value="true" />
-            <TrendShip />
-            <TrendShip />
-            <TrendShip />
-            <TrendShip />
-            <TrendShip />
-            <TrendShip />
+            {/* <TrendShip value="true" />
+            <TrendShip value="true" /> */}
+            {ships.map((e) => (
+              <TrendShip key={e.token_id} ship={e} />
+            ))}
           </div>
         </div>
         <div className="table-start">
@@ -50,74 +98,35 @@ export default function Inventory() {
                 <tr>
                   <th className="hide">SNo</th>
                   <th className="down">Collection</th>
-                  <th>Features</th>
+                  <th>Damage</th>
                   <th>Buy</th>
                   <th>Owners</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td className="mak-flex">
-                    <img className="fix" src={Img} alt="no"></img>{" "}
-                    <p>Engine Alpha</p>
-                  </td>
-                  <td>
-                    <div className="btn-grp">37 million HP</div>
-                  </td>
-                  <td>
-                    <div className="btn-grp">
-                      <button className="tez">0.99 XTZ</button>
-                      <button className="orz">0.99 SPZ</button>
-                    </div>
-                  </td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td className="mak-flex">
-                    <img className="fix" src={Img} alt="no"></img>{" "}
-                    <p>Bullet 2</p>
-                  </td>
-                  <td>Francisco Chang</td>
-                  <td>
-                    <div className="btn-grp">
-                      <button className="tez">0.99 XTZ</button>
-                      <button className="orz">0.99 SPZ</button>
-                    </div>
-                  </td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td className="mak-flex">
-                    <img className="fix" src={Img} alt="no"></img>{" "}
-                    <p>Bullet 3</p>
-                  </td>
-                  <td>Roland Mendel</td>
-                  <td>
-                    <div className="btn-grp">
-                      <button className="tez">0.99 XTZ</button>
-                      <button className="orz">0.99 SPZ</button>
-                    </div>
-                  </td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td className="mak-flex">
-                    <img className="fix" src={Img} alt="no"></img>{" "}
-                    <p>Bullet 4</p>
-                  </td>
-                  <td>Helen Bennett</td>
-                  <td>
-                    <div className="btn-grp">
-                      <button className="tez">0.99 XTZ</button>
-                      <button className="orz">0.99 SPZ</button>
-                    </div>
-                  </td>
-                  <td>0</td>
-                </tr>
+                {bullets.map((e, index) => (
+                  <tr>
+                    <td>{index + 1}</td>
+                    <td className="mak-flex">
+                      <img className="fix" src={e.url} alt="no"></img>{" "}
+                      <p>{e.name}</p>
+                    </td>
+                    <td>
+                      <div className="btn-grp">-20% Health</div>
+                    </td>
+                    <td>
+                      <div className="btn-grp">
+                        <button className="tez" onClick={() => handleBuyXTZ(e)}>
+                          {e.price / 1000000} XTZ
+                        </button>
+                        <button className="orz" onClick={() => handleBuySPZ(e)}>
+                          {e.price / 10000} SPZ
+                        </button>
+                      </div>
+                    </td>
+                    <td>{e.owners}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -125,4 +134,4 @@ export default function Inventory() {
       </div>
     </div>
   );
-}
+}  

@@ -706,6 +706,11 @@ th {
 }
 
 .unity {
-  height: 1000px;
-  width: 1200px;
+  max-width: 100vw;
+}
+
+@media only screen and (max-width: 1230px) {
+  .unity {
+    max-width: 70vw;
+  }
 }

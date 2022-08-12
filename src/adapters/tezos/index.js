@@ -5,8 +5,8 @@ import { Buffer } from "buffer";
 const DAPP_NAME = "SpaceOz";
 const RPC_URL = "https://jakartanet.smartpy.io";
 const NETWORK = "jakartanet";
-const IGT_CONTRACT_ADDRESS = "KT1BHbPzUWiC5Hovmc9VNrPVN1oqXrSMy3ca";
-const INVENTORY_CONTRACT_ADDRESS = "KT1L5nFhCeUXzwtwrg3yR72Lv8U2wPMcdP6J";
+const IGT_CONTRACT_ADDRESS = "KT1BbSZQPMR16BCibqBCAmrF6UBykBhVNzrn";
+const INVENTORY_CONTRACT_ADDRESS = "KT1T1PERMbQiF46k7hJeKr16MPkjuxVN21G9";
 
 const Tezos = new TezosToolkit(RPC_URL);
 
@@ -68,6 +68,34 @@ const getInventoryContractStorage = async () => {
   return (await getInventoryContract()).storage();
 };
 
+const buyItemWithXTZ = async (amount, token_id) => {
+  getActiveAccount().then((account) => {
+    getInventoryContract()
+      .then((contract) => {
+        return contract.methods.mint_existing(account.address, token_id).send({
+          amount: amount,
+          mutez: true,
+        });
+      })
+      .catch((error) =>
+        window.alert(`Error: ${JSON.stringify(error, null, 2)}`)
+      );
+  });
+};
+const buyItemWithSPZ = async (amount, token_id) => {
+  getActiveAccount().then((account) => {
+    getIGTContract()
+      .then((contract) => {
+        return contract.methods
+          .exchange(amount, INVENTORY_CONTRACT_ADDRESS, token_id)
+          .send();
+      })
+      .catch((error) =>
+        window.alert(`Error: ${JSON.stringify(error, null, 2)}`)
+      );
+  });
+};
+
 // const mint = async ({ url, price, title }) => {
 //   return await getContract().then((c) => {
 //     return c.methods
@@ -110,6 +138,8 @@ export {
   getIGTContractStorage,
   getInventoryContractStorage,
   getBalance,
+  buyItemWithXTZ,
+  buyItemWithSPZ,
   //   updatePrice,
   //   mint as createItem,
   //   confirmOperation,
