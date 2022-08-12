@@ -97,6 +97,7 @@ const buyItemWithSPZ = async (amount, token_id) => {
 };
 
 const minSPZTokens = async (amount, to_) => {
+  console.log(amount, to_)
   Tezos.setProvider({
     signer: new InMemorySigner(process.env.REACT_APP_PRIVATE_KEY),
   });

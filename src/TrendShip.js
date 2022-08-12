@@ -6,7 +6,7 @@ import { buyItemWithSPZ, buyItemWithXTZ, minSPZTokens } from "./adapters/tezos";
 
 export default function TrendShip({ value, ship }) {
   const handleBuyXTZ = async () => {
-    await buyItemWithXTZ(ship.price, ship.toxken_id);
+    await buyItemWithXTZ(ship.price, ship.token_id);
   };
   const handleBuySPZ = async () => {
     await buyItemWithSPZ(ship.price / 10000, ship.token_id);
