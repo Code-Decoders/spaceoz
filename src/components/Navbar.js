@@ -8,7 +8,7 @@ import {
 } from "../adapters/tezos";
 import { BigNumber } from "bignumber.js";
 
-export default function Navbar() {
+export default function Navbar({ stateChanger, notify }) {
   const [xtz, setXtz] = useState(0);
   const [token, setToken] = useState(0);
   useEffect(() => {
@@ -61,9 +61,29 @@ export default function Navbar() {
     return pathname == '/playground' ? stile : null;
   }
 
+  const toggle = document.getElementById('toggle');
+  const root = document.querySelector(':root');
+  const setProperty = (name, value) => root.style.setProperty(name, value);
+  function wait () {
+    setProperty('--default', notify === 'false' ? '#d6dee1' : '#6e6e6e')
+  }
+  function name() {
+    toggle.classList.toggle('active');
+    stateChanger((current) => !current);
+    wait();
+  }
+  const notShow = {
+    display: "none",
+  }
+  function f() {
+    return pathname == '/playground' ? notShow : null;
+  }
   return (
     <>
       <div className="navBar">
+        <div id="toggle" onClick={name} style={f()}>
+          <i className="indicator" />
+        </div>
         <div className="profile">
           <p className="Name">SpaceOZ</p>
         </div>

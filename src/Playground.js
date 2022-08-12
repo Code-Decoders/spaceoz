@@ -86,7 +86,7 @@ export default function Playground() {
             removeEventListener("MintTokens", handleCoins);
             removeEventListener("OnAppReady", OnAppReady);
         }
-    }, [addEventListener, removeEventListener, handleCoins, OnAppReady]);
+    }, [addEventListener, removeEventListener, handleCoins, OnAppReady, unload]);
 
 
 
@@ -95,7 +95,7 @@ export default function Playground() {
     // We'll round the loading progression to a whole number to represent the
     // percentage of the Unity Application that has loaded.
     const loadingPercentage = Math.round(loadingProgression * 100);
-
+    
     return (
         <div className="playgame">
             <div className="left">
@@ -119,7 +119,7 @@ export default function Playground() {
                                 <p>Loading... ({loadingPercentage}%)</p>
                             </div>
                         )}
-                        {!loading && <Unity className="unity" unityProvider={unityProvider} style={{ width: "calc(100% - 220px)", aspectRatio: "16/9", overflow: "hidden" }} />}
+                        {!loading && <Unity className="unity" unityProvider={unityProvider} style={{ width: "calc(100% - 100px)", aspectRatio: "16/9", overflow: "hidden" }} />}
                     </div>
                 </div>
             </div>
