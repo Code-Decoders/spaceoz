@@ -64,12 +64,14 @@ export default function Inventory() {
       });
     });
   };
+  const[alarm, setAlarm] = useState("true");
+  console.log(alarm);
   return (
-    <div className="inven-page">
+    <div className="inven-page" style={{'--default': alarm===false ? '#6e6e6e' : null}}>
       <div className="left">
-        <Navbar />
+        <Navbar stateChanger={setAlarm} notify={alarm}/>
       </div>
-      <div className="right">
+      <div className="right" style={{backgroundColor: alarm===false ? '#f5f4fc' : null}}>
         <div className="Top">
           <div className="input-div">
             <img className="hold1" src={photo} alt="not" />
@@ -83,21 +85,20 @@ export default function Inventory() {
           <Appbar />
         </div>
         <div className="Middle">
-          <span className="Heading">Trending Warships</span>
+          <span className="Heading" style={{color: alarm===false ? "black" : null }}>Trending Warships</span>
           <div className="card-begin">
-            {/* <TrendShip value="true" />
-            <TrendShip value="true" /> */}
-
             {ships.map((e) => (
               <TrendShip key={e.token_id} ship={e} />
             ))}
+            <TrendShip value="true" />
+            <TrendShip value="true" />
           </div>
         </div>
-        <div className="table-start">
-          <span className="Headin">Top Upgrades</span>
+        <div className="table-start" style={{backgroundColor: alarm===false ? "#f5f4fc" : null }}>
+          <span className="Headin" style={{color: alarm===false ? "black" : null }}>Top Upgrades</span>
           <div className="table-box">
             <table>
-              <tbody>
+              <thead>
                 <tr>
                   <th className="hide">SNo</th>
                   <th className="down">Collection</th>
@@ -105,11 +106,13 @@ export default function Inventory() {
                   <th>Buy</th>
                   <th>Owners</th>
                 </tr>
+              </thead>
+              <tbody>
                 {bullets.map((e, index) => (
                   <tr>
                     <td>{index + 1}</td>
                     <td className="mak-flex">
-                      <img className="fix" src={e.url} alt="no"></img>{" "}
+                      <img className="fix" src={e.url} alt="no"></img>
                       <p>{e.name}</p>
                     </td>
                     <td>
@@ -135,4 +138,4 @@ export default function Inventory() {
       </div>
     </div>
   );
-}
+}  
