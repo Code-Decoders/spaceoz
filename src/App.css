@@ -573,7 +573,7 @@ th {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--default);;
+  background-color: var(--default);
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: border-box;
@@ -719,13 +719,11 @@ th {
   }
 }
 
-.navBar
-{
+.navBar {
   transition: 0.5s;
 }
 
-#toggle
-{
+#toggle {
   position: absolute;
   left: 70px;
   top: 260px;
@@ -736,37 +734,63 @@ th {
   background: #222;
   transition: 0.5s;
   cursor: pointer;
-  box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
-    inset 0 8px 8px rgba(0,0,0,0.1),
-    inset 0 -4px 4px rgba(0,0,0,0.1);
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
 }
-#toggle.active
-{
+#toggle.active {
   background: #fff;
-  box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
-    inset 0 2px 8px rgba(0,0,0,0.1),
-    inset 0 -4px 4px rgba(0,0,0,0.05);
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.05);
 }
-#toggle .indicator
-{
+#toggle .indicator {
   position: absolute;
   top: -60px;
   left: -60px;
   width: 160px;
   height: 160px;
-  background: linear-gradient(to bottom, #444,#222);
+  background: linear-gradient(to bottom, #444, #222);
   border-radius: 50%;
   transform: scale(0.2);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5),
-    inset 0 4px 4px rgba(255,255,255,0.2),
-    inset 0 -4px 4px rgba(255,255,255,0.2);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0 4px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.2);
   transition: 0.5s;
 }
-#toggle.active .indicator
-{
+#toggle.active .indicator {
   left: 4px;
-  background: linear-gradient(to bottom, #eaeaea,#f9f9f9);
-  box-shadow: 2 2px 60px rgba(0,0,0,0.1),
-    inset 0 8px 8px rgba(255,255,255,1),
-    inset 0 -4px 4px rgba(255,255,255,1);
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  box-shadow: 2 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(255, 255, 255, 1),
+    inset 0 -4px 4px rgba(255, 255, 255, 1);
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(90deg, #009fff, #ec2f4b);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#spinner2 {
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 2s linear infinite;
+}
+
+#spinner2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  width: 80%;
+  height: 90%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 5px black;
 }
