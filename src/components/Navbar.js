@@ -48,17 +48,17 @@ export default function Navbar() {
     height: "49px",
     color: "#b7abff",
     backgroundColor: "#201e43",
-    border: "3px solid #000000",
+    border: "2px solid #000000",
     borderRightWidth: "thin",
     borderRadius: "5px 0px 0px 5px",
   }
 
-  function d () {
-    return pathname=='/' ? stile : null;
+  function d() {
+    return pathname == '/' ? stile : null;
   }
 
-  function b () {
-    return pathname=='/playground' ? stile : null;
+  function b() {
+    return pathname == '/playground' ? stile : null;
   }
 
   return (

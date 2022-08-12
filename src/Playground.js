@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Appbar from "./components/Appbar";
 import photo from "./search.png"
@@ -6,12 +6,16 @@ import fil from "./filter.png"
 import { Unity, useUnityContext } from 'react-unity-webgl';
 
 export default function Playground() {
-    const { unityProvider, isLoaded, loadingProgression, addEventListener, removeEventListener, sendMessage, } = useUnityContext({
+    const { unityProvider, isLoaded, unload, loadingProgression, addEventListener, removeEventListener, sendMessage, } = useUnityContext({
         loaderUrl: "build/Build.loader.js",
         dataUrl: "build/Build.data",
         frameworkUrl: "build/Build.framework.js",
         codeUrl: "build/Build.wasm",
+        productName: "SpaceOz",
+        companyName: "CodeDecoders"
     });
+
+    const ref = useRef();
 
     const handleCoins = useCallback((val) => {
         console.log(val);
@@ -28,10 +32,11 @@ export default function Playground() {
 
     useEffect(() => {
         addEventListener("MintTokens", handleCoins);
-        addEventListener("OnAppReady", OnAppReady)
+        addEventListener("OnAppReady", OnAppReady);
         return () => {
+            unload()
             removeEventListener("MintTokens", handleCoins);
-            removeEventListener("OnAppReady", OnAppReady)
+            removeEventListener("OnAppReady", OnAppReady);
         }
     }, [addEventListener, removeEventListener, handleCoins, OnAppReady]);
 
@@ -42,14 +47,14 @@ export default function Playground() {
     // We'll round the loading progression to a whole number to represent the
     // percentage of the Unity Application that has loaded.
     const loadingPercentage = Math.round(loadingProgression * 100);
-    
+
     return (
         <div className="playgame">
             <div className="left">
                 <Navbar />
             </div>
             <div className="right">
-                <div className="Top">
+                <div className="Top" style={{ position: "sticky" }}>
                     <div className="input-div">
                         <img className="hold1" src={photo} alt="not" />
                         <input className="tag-input" type="text" placeholder="Search Nfts..." />
@@ -66,7 +71,7 @@ export default function Playground() {
                                 <p>Loading... ({loadingPercentage}%)</p>
                             </div>
                         )}
-                        <Unity className="unity" unityProvider={unityProvider} devicePixelRatio={16 / 9} style={{ height: 'calc(100vh - 135px)',aspectRatio: "16/9", overflow: "hidden" }} />
+                        <Unity ref={ref} className="unity" unityProvider={unityProvider} devicePixelRatio={16 / 9} style={{ height: 'calc(100vh - 135px)', aspectRatio: "16/9", overflow: "hidden" }} />
                     </div>
                 </div>
             </div>

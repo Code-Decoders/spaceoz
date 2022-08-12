@@ -55,6 +55,7 @@ export default function Appbar() {
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
   }, [isShown]);
+
   return (
     <>
       {!wallet ? (
@@ -69,7 +70,7 @@ export default function Appbar() {
         <div className="dp-pic">
           <div className="user-info">
             <div>
-              <span className="key-name">{wallet.address.slice(0,10)}</span> 
+              <span className="key-name">{wallet.address.slice(0, 10)}</span>
             </div>
             <div>
               <div className="wrapper" ref={ref}>
