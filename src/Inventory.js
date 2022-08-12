@@ -32,8 +32,8 @@ export default function Inventory() {
         <div className="Middle">
           <span className="Heading">Trending Warships</span>
           <div className="card-begin">
-            <TrendShip value="true"/>
-            <TrendShip value="true"/>
+            <TrendShip value="true" />
+            <TrendShip value="true" />
             <TrendShip />
             <TrendShip />
             <TrendShip />
@@ -46,7 +46,7 @@ export default function Inventory() {
           <span className="Headin">Top Upgrades</span>
           <div className="table-box">
             <table>
-              <tbody>
+              <thead>
                 <tr>
                   <th className="hide">SNo</th>
                   <th className="down">Collection</th>
@@ -54,6 +54,8 @@ export default function Inventory() {
                   <th>Buy</th>
                   <th>Owners</th>
                 </tr>
+              </thead>
+              <tbody>
                 <tr>
                   <td>1</td>
                   <td className="mak-flex">

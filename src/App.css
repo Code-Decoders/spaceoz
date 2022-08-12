@@ -137,6 +137,7 @@ body {
   margin-left: 240px;
   color: white;
   background: rgb(11, 10, 36);
+  //background: whitesmoke;
 }
 
 .navBar {
@@ -211,7 +212,7 @@ body {
   background: rgb(32, 30, 67);
   border: 1px solid #000000;
   border-radius: 5px 0px 0px 5px;
-} 
+}
 
 .child {
   margin-top: 12px;
@@ -395,6 +396,7 @@ input[type="text"]:focus {
   font-size: 24px;
   line-height: 17px;
   color: #f5f4fb;
+  //color: black;
 }
 
 .fixed-ele {
@@ -493,6 +495,7 @@ input[type="text"]:focus {
   top: 600px;
   min-width: 100vw;
   min-height: 400px;
+  //background: whitesmoke;
 }
 
 .Headin {
@@ -507,6 +510,7 @@ input[type="text"]:focus {
   font-size: 24px;
   line-height: 29px;
   color: #f5f4fb;
+  //color: black;
 }
 
 table {
@@ -569,6 +573,7 @@ th {
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: border-box;
+  //background-color: grey;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -689,8 +694,8 @@ th {
   background: black;
   display: flex;
   flex-direction: row;
-  box-shadow: 0px 5px 5px rgba(0,0,0,0.4);
-	text-shadow: 0 2px 2px rgba(0,0,0,0.4);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .rit {
@@ -698,4 +703,9 @@ th {
   top: 12px;
   left: 180px;
   right: 200px;
+}
+
+.unity {
+  height: 1000px;
+  width: 1200px;
 }
