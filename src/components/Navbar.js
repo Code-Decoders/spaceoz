@@ -65,20 +65,23 @@ export default function Navbar({ stateChanger, notify }) {
   const root = document.querySelector(':root');
   const setProperty = (name, value) => root.style.setProperty(name, value);
   function wait () {
-      setProperty(
-        '--default', '#6e6e6e'
-      )
+    setProperty('--default', notify === 'false' ? '#d6dee1' : '#6e6e6e')
   }
   function name() {
     toggle.classList.toggle('active');
     stateChanger((current) => !current);
     wait();
   }
-
+  const notShow = {
+    display: "none",
+  }
+  function f() {
+    return pathname == '/playground' ? notShow : null;
+  }
   return (
     <>
       <div className="navBar">
-        <div id="toggle" onClick={name}>
+        <div id="toggle" onClick={name} style={f()}>
           <i className="indicator" />
         </div>
         <div className="profile">
