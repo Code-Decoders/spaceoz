@@ -474,9 +474,9 @@ input[type="text"]:focus {
 .div-owner {
   top: 184px;
   left: 8px;
-  background: rgba(32, 30, 67, 1);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
-  width: 90px;
+  width: 70px;
   height: 23px;
   border-radius: 13px;
   text-align: center;
