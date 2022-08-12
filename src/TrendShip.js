@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import random from "./random.png";
 import { useEffect, useRef, useState } from "react";
-import { buyItemWithSPZ, buyItemWithXTZ } from "./adapters/tezos";
+import { buyItemWithSPZ, buyItemWithXTZ, minSPZTokens } from "./adapters/tezos";
 
 export default function TrendShip({ value, ship }) {
   const handleBuyXTZ = async () => {

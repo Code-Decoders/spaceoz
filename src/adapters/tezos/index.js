@@ -1,12 +1,12 @@
 import { BeaconWallet } from "@taquito/beacon-wallet";
-import { TezosToolkit } from "@taquito/taquito";
-import { Buffer } from "buffer";
+import { MichelsonMap, TezosToolkit } from "@taquito/taquito";
+import { InMemorySigner, importKey } from "@taquito/signer";
 
 const DAPP_NAME = "SpaceOz";
 const RPC_URL = "https://jakartanet.smartpy.io";
 const NETWORK = "jakartanet";
-const IGT_CONTRACT_ADDRESS = "KT1BbSZQPMR16BCibqBCAmrF6UBykBhVNzrn";
-const INVENTORY_CONTRACT_ADDRESS = "KT1T1PERMbQiF46k7hJeKr16MPkjuxVN21G9";
+const IGT_CONTRACT_ADDRESS = "KT1M9SV5rGfhmYmmZPUYaswsw48DVQZLZx7U";
+const INVENTORY_CONTRACT_ADDRESS = "KT18cyGqjjJcnhrjwHY2pGoCfV1ycAUMfXEw";
 
 const Tezos = new TezosToolkit(RPC_URL);
 
@@ -96,6 +96,20 @@ const buyItemWithSPZ = async (amount, token_id) => {
   });
 };
 
+const minSPZTokens = async (amount, to_) => {
+  console.log(amount, to_)
+  Tezos.setProvider({
+    signer: new InMemorySigner(process.env.REACT_APP_PRIVATE_KEY),
+  });
+  await Tezos.contract
+    .at(IGT_CONTRACT_ADDRESS)
+    .then((contract) => {
+      return contract.methods.mint(amount, to_).send();
+    })
+    .catch((error) => window.alert(`Error: ${JSON.stringify(error, null, 2)}`));
+  Tezos.setWalletProvider(wallet);
+};
+
 // const mint = async ({ url, price, title }) => {
 //   return await getContract().then((c) => {
 //     return c.methods
@@ -140,6 +154,7 @@ export {
   getBalance,
   buyItemWithXTZ,
   buyItemWithSPZ,
+  minSPZTokens,
   //   updatePrice,
   //   mint as createItem,
   //   confirmOperation,
