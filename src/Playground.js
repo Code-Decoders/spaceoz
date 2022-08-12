@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import Appbar from "./components/Appbar";
 import photo from "./search.png"
@@ -38,7 +38,7 @@ export default function Playground() {
             removeEventListener("MintTokens", handleCoins);
             removeEventListener("OnAppReady", OnAppReady);
         }
-    }, [addEventListener, removeEventListener, handleCoins, OnAppReady]);
+    }, [addEventListener, removeEventListener, handleCoins, OnAppReady, unload]);
 
 
 
@@ -47,7 +47,7 @@ export default function Playground() {
     // We'll round the loading progression to a whole number to represent the
     // percentage of the Unity Application that has loaded.
     const loadingPercentage = Math.round(loadingProgression * 100);
-
+    
     return (
         <div className="playgame">
             <div className="left">
