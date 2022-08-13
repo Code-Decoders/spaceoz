@@ -199,7 +199,7 @@ export default function Inventory() {
                         <p>Long Shot</p>
                       </td>
                       <td>
-                        <div className="btn-grp">-30% Health</div>
+                        <div className="btn-grp">-15% Health</div>
                       </td>
                       <td>
                         <p>Coming Soon</p>
