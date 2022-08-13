@@ -15,7 +15,7 @@
 - Multi-Ownership of NFTs
 - Light/Dark Mode Available
 - Search for specific upgrades
-- Sort the Upgrades based on their popularity, strengths and price
+- Sort the upgrades based on their popularity, strengths and price
 
 ## Deployed Smart Contracts
 
