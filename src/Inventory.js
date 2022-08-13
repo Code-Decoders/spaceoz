@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import photo from "./search.png";
 import fil from "./filter.png";
-import face from "./face.png";
+import face from "./bullet.png";
 import caret from "./caret-down.png";
 import random from "./random.png";
 import vector from "./vector.png";
@@ -64,6 +64,23 @@ export default function Inventory() {
   };
   const [alarm, setAlarm] = useState("true");
   console.log(alarm);
+  function myFunction() {
+    let filter, table, tr, i, j;
+    filter = document.getElementById("searchInput").value.toLowerCase();
+    table = document.getElementById("userTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 1; i < tr.length; i++) {
+      tr[i].style.display = "none";
+      const tdArray = tr[i].getElementsByTagName("td");
+      for (j = 0; j < tdArray.length; j++) {
+        const cellValue = tdArray[j];
+        if (cellValue && cellValue.innerHTML.toLowerCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          break;
+        }
+      }
+    }
+  }
   return (
     <div className="inven-page" style={{ '--default': alarm === false ? '#6e6e6e' : null }}>
       <div className="left">
@@ -74,6 +91,8 @@ export default function Inventory() {
           <div className="input-div">
             <img className="hold1" src={photo} alt="not" />
             <input
+              onKeyUp={myFunction}
+              id="searchInput"
               className="tag-input"
               type="text"
               placeholder="Search Nfts..."
@@ -82,9 +101,9 @@ export default function Inventory() {
           </div>
           <Appbar />
         </div>
-        {loading ? <div style={{ display: "flex", alignItems: "center",top: 0, left: 240, bottom: 0, right: 0, justifyContent: "center", position: "absolute" }}>
-          <div class="spinnerWrap">
-            <div class="spinner" id="spinner2"></div>
+        {loading ? <div style={{ display: "flex", alignItems: "center", top: 0, left: 240, bottom: 0, right: 0, justifyContent: "center", position: "absolute" }}>
+          <div className="spinnerWrap">
+            <div className="spinner" id="spinner2"></div>
           </div>
         </div> :
           <div className="Middle">
@@ -99,7 +118,7 @@ export default function Inventory() {
             <div className="table-start" style={{ backgroundColor: alarm === false ? "#f5f4fc" : null }}>
               <span className="Headin" style={{ color: alarm === false ? "black" : null }}>Top Upgrades</span>
               <div className="table-box">
-                <table>
+                <table id="userTable">
                   <tbody>
                     <tr>
                       <th className="hide">SNo</th>
@@ -131,6 +150,20 @@ export default function Inventory() {
                         <td>{e.owners}</td>
                       </tr>
                     ))}
+                    <tr>
+                      <td>4</td>
+                      <td className="mak-flex">
+                        <img className="fix" src={face} alt="no"></img>
+                        <p>Long Shot</p>
+                      </td>
+                      <td>
+                        <div className="btn-grp">-30% Health</div>
+                      </td>
+                      <td>
+                        <p>Coming Soon</p>
+                      </td>
+                      <td>0</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
