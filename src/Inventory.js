@@ -5,10 +5,10 @@ import fil from "./filter.png";
 import face from "./bullet.png";
 import caret from "./caret-down.png";
 import random from "./random.png";
-import vector from "./vector.png";
+import bullet from "./bullet (1).png";
 import Appbar from "./components/Appbar";
 import TrendShip from "./TrendShip";
-import Img from "./Img.png";
+import sort from "./sort (1).png";
 import {
   buyItemWithSPZ,
   buyItemWithXTZ,
@@ -81,6 +81,46 @@ export default function Inventory() {
       }
     }
   }
+  function sortTable(n) {
+    console.log("start");
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("userTable");
+    switching = true;
+    dir = "asc";
+    while (switching) {
+      switching = false;
+      rows = table.rows;
+      for (i = 1; i < (rows.length - 1); i++) {
+        shouldSwitch = false;
+        x = rows[i].getElementsByTagName("TD")[n];
+        y = rows[i + 1].getElementsByTagName("TD")[n];
+        if (x != null & y != null) {
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+      }
+      if (shouldSwitch) {
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+        switchcount++;
+      } else {
+        if (switchcount == 0 && dir == "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
+    }
+    console.log("end")
+  }
   return (
     <div className="inven-page" style={{ '--default': alarm === false ? '#6e6e6e' : null }}>
       <div className="left">
@@ -121,11 +161,13 @@ export default function Inventory() {
                 <table id="userTable">
                   <tbody>
                     <tr>
-                      <th className="hide">SNo</th>
+                      <th className="hide" onClick={() => sortTable(0)}>
+                        <img className="testing" src={sort} alt="no"></img>
+                      </th>
                       <th className="down">Collection</th>
-                      <th>Damage</th>
-                      <th>Buy</th>
-                      <th>Owners</th>
+                      <th onClick={() => sortTable(2)}>Damage</th>
+                      <th onClick={() => sortTable(3)}>Buy</th>
+                      <th onClick={() => sortTable(4)}>Owners</th>
                     </tr>
                     {bullets.map((e, index) => (
                       <tr>
@@ -158,6 +200,20 @@ export default function Inventory() {
                       </td>
                       <td>
                         <div className="btn-grp">-30% Health</div>
+                      </td>
+                      <td>
+                        <p>Coming Soon</p>
+                      </td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td className="mak-flex">
+                        <img className="fix" src={bullet} alt="no"></img>
+                        <p>Long Shot rebel</p>
+                      </td>
+                      <td>
+                        <div className="btn-grp">-40% Health</div>
                       </td>
                       <td>
                         <p>Coming Soon</p>

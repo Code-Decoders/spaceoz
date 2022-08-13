@@ -540,6 +540,7 @@ th {
   font-size: 17px;
   line-height: 17px;
   color: #ecebf6;
+  cursor: pointer;
 }
 
 td {
@@ -659,9 +660,9 @@ th {
   border-width: 0px;
 }
 
-.hide {
+/* .hide {
   color: #201e43;
-}
+} */
 
 .mak-flex {
   display: flex;
@@ -679,7 +680,7 @@ th {
 }
 
 .table-box {
-  margin-bottom: 600px;
+  margin-bottom: 700px;
 }
 
 .diag {

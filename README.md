@@ -13,6 +13,9 @@
 - Utilized the Tezos network for the In Game Token management
 - Simple and fun to play Game
 - Multi-Ownership of NFTs
+- Light/Dark Mode Available
+- Search for specific upgrades
+- Sort the Upgrades based on their popularity, strengths and price
 
 ## Deployed Smart Contracts
 
