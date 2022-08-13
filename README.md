@@ -14,7 +14,10 @@
 - Simple and fun to play Game
 - Multi-Ownership of NFTs
 
+## Deployed Smart Contracts
 
+- [The Inventory NFT Token](https://better-call.dev/jakartanet/KT1M9SV5rGfhmYmmZPUYaswsw48DVQZLZx7U)
+- [The SPCOZ In-Game-Token](https://better-call.dev/jakartanet/KT18cyGqjjJcnhrjwHY2pGoCfV1ycAUMfXEw/operations)
 
 ## Demo
 
