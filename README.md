@@ -36,7 +36,7 @@ Youtube Video Demo
 
 **Client:** React.JS, Unity, WebGL, taquitojs, tailwind
 
-**Server:** Tezos Blockchain
+**Server:** Tezos Blockchain(Smart.py)
 ## Roadmap
 
 - [x]  Player To Earn
