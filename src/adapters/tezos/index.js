@@ -5,8 +5,8 @@ import { InMemorySigner, importKey } from "@taquito/signer";
 const DAPP_NAME = "SpaceOz";
 const RPC_URL = "https://jakartanet.smartpy.io";
 const NETWORK = "jakartanet";
-const IGT_CONTRACT_ADDRESS = "KT1M9SV5rGfhmYmmZPUYaswsw48DVQZLZx7U";
-const INVENTORY_CONTRACT_ADDRESS = "KT18cyGqjjJcnhrjwHY2pGoCfV1ycAUMfXEw";
+const IGT_CONTRACT_ADDRESS = "KT1GFjj3DCzzqAGP8nnt9Hm3rMtqem4KBAFp";
+const INVENTORY_CONTRACT_ADDRESS = "KT1AaQqifT3smqNGpPkBmPqXLQP8yGjqJr63";
 
 const Tezos = new TezosToolkit(RPC_URL);
 

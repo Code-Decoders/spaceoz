@@ -341,7 +341,7 @@ def test():
 
     igt = SpaceOzInGameToken(sp.address("tz1QUYw77iqCsYUutxF511nhRhd1Z21YJKxU"), metadata_base, "https://example.com")
     sc += igt
-    fa2 = TheInventoryFA2(sp.address("tz1QUYw77iqCsYUutxF511nhRhd1Z21YJKxU"), metadata_base, "https://example.com", ingametoken=sp.address("KT1BbSZQPMR16BCibqBCAmrF6UBykBhVNzrn"))
+    fa2 = TheInventoryFA2(sp.address("tz1QUYw77iqCsYUutxF511nhRhd1Z21YJKxU"), metadata_base, "https://example.com", ingametoken=sp.address("KT1GFjj3DCzzqAGP8nnt9Hm3rMtqem4KBAFp"))
     sc += fa2
 
     sc.h2("Mint entrypoint")

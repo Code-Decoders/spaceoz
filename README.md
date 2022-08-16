@@ -19,8 +19,8 @@
 
 ## Deployed Smart Contracts
 
-- [The Inventory NFT Token](https://better-call.dev/jakartanet/KT1M9SV5rGfhmYmmZPUYaswsw48DVQZLZx7U)
-- [The SPCOZ In-Game-Token](https://better-call.dev/jakartanet/KT18cyGqjjJcnhrjwHY2pGoCfV1ycAUMfXEw/operations)
+- [The Inventory NFT Token](https://better-call.dev/jakartanet/KT1GFjj3DCzzqAGP8nnt9Hm3rMtqem4KBAFp)
+- [The SPCOZ In-Game-Token](https://better-call.dev/jakartanet/KT1AaQqifT3smqNGpPkBmPqXLQP8yGjqJr63)
 
 ## Demo
 
@@ -42,10 +42,11 @@ Youtube Video Demo
 - [x]  Player To Earn
 - [x]  Multiple Owner Ownership
 - [ ]  Multiplayer Support like a open-world a arena
+- [ ]  OBJKT.com integration
 - [ ]  Security Enhancements/ Auditing in the Smart Contract
 - [ ]  More upgrades and abilities
-- [ ]  Imporove gaming expereince
-- [ ]  Impove UI/UX for the Inventory
+- [ ]  Improve gaming expereince
+- [ ]  Improve UI/UX for the Inventory
 
 
 ## Run Locally

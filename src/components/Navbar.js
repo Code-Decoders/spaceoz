@@ -15,7 +15,7 @@ export default function Navbar({ stateChanger, notify }) {
     getUserBalance();
     const interval = setInterval(() => {
       getUserBalance();
-    }, 30000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
