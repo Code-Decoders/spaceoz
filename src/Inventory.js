@@ -21,7 +21,7 @@ import { unpackDataBytes } from "@taquito/michel-codec";
 export default function Inventory() {
   const [ships, setShips] = useState([]);
   const [bullets, setBullets] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     getGameData();
   }, []);
@@ -59,8 +59,8 @@ export default function Inventory() {
         setBullets((bullets) => [...bullets, _data]);
       }
       console.log(_data);
+      setLoading(false);
     }
-    setLoading(false);
   };
   const [alarm, setAlarm] = useState("true");
   console.log(alarm);
@@ -74,7 +74,10 @@ export default function Inventory() {
       const tdArray = tr[i].getElementsByTagName("td");
       for (j = 0; j < tdArray.length; j++) {
         const cellValue = tdArray[j];
-        if (cellValue && cellValue.innerHTML.toLowerCase().indexOf(filter) > -1) {
+        if (
+          cellValue &&
+          cellValue.innerHTML.toLowerCase().indexOf(filter) > -1
+        ) {
           tr[i].style.display = "";
           break;
         }
@@ -83,18 +86,26 @@ export default function Inventory() {
   }
   function sortTable(n) {
     console.log("start");
-    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    var table,
+      rows,
+      switching,
+      i,
+      x,
+      y,
+      shouldSwitch,
+      dir,
+      switchcount = 0;
     table = document.getElementById("userTable");
     switching = true;
     dir = "asc";
     while (switching) {
       switching = false;
       rows = table.rows;
-      for (i = 1; i < (rows.length - 1); i++) {
+      for (i = 1; i < rows.length - 1; i++) {
         shouldSwitch = false;
         x = rows[i].getElementsByTagName("TD")[n];
         y = rows[i + 1].getElementsByTagName("TD")[n];
-        if (x != null & y != null) {
+        if ((x != null) & (y != null)) {
           if (dir == "asc") {
             if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
               shouldSwitch = true;
@@ -119,14 +130,20 @@ export default function Inventory() {
         }
       }
     }
-    console.log("end")
+    console.log("end");
   }
   return (
-    <div className="inven-page" style={{ '--default': alarm === false ? '#6e6e6e' : null }}>
+    <div
+      className="inven-page"
+      style={{ "--default": alarm === false ? "#6e6e6e" : null }}
+    >
       <div className="left">
         <Navbar stateChanger={setAlarm} notify={alarm} />
       </div>
-      <div className="right" style={{ backgroundColor: alarm === false ? '#f5f4fc' : null }}>
+      <div
+        className="right"
+        style={{ backgroundColor: alarm === false ? "#f5f4fc" : null }}
+      >
         <div className="Top">
           <div className="input-div">
             <img className="hold1" src={photo} alt="not" />
@@ -141,22 +158,48 @@ export default function Inventory() {
           </div>
           <Appbar />
         </div>
-        {loading ? <div style={{ display: "flex", alignItems: "center", top: 0, left: 240, bottom: 0, right: 0, justifyContent: "center", position: "absolute" }}>
-          <div className="spinnerWrap">
-            <div className="spinner" id="spinner2"></div>
+        {loading ? (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              top: 0,
+              left: 240,
+              bottom: 0,
+              right: 0,
+              justifyContent: "center",
+              position: "absolute",
+            }}
+          >
+            <div className="spinnerWrap">
+              <div className="spinner" id="spinner2"></div>
+            </div>
           </div>
-        </div> :
+        ) : (
           <div className="Middle">
-            <span className="Heading" style={{ color: alarm === false ? "black" : null }}>Trending Warships</span>
+            <span
+              className="Heading"
+              style={{ color: alarm === false ? "black" : null }}
+            >
+              Trending Warships
+            </span>
             <div className="card-begin">
               {ships.map((e) => (
                 <TrendShip key={e.token_id} ship={e} />
               ))}
-              <TrendShip value="true" />
-              <TrendShip value="true" />
+              {ships.length > 4 && <TrendShip value="true" />}
+              {ships.length > 4 && <TrendShip value="true" />}
             </div>
-            <div className="table-start" style={{ backgroundColor: alarm === false ? "#f5f4fc" : null }}>
-              <span className="Headin" style={{ color: alarm === false ? "black" : null }}>Top Upgrades</span>
+            <div
+              className="table-start"
+              style={{ backgroundColor: alarm === false ? "#f5f4fc" : null }}
+            >
+              <span
+                className="Headin"
+                style={{ color: alarm === false ? "black" : null }}
+              >
+                Top Upgrades
+              </span>
               <div className="table-box">
                 <table id="userTable">
                   <tbody>
@@ -181,10 +224,16 @@ export default function Inventory() {
                         </td>
                         <td>
                           <div className="btn-grp">
-                            <button className="tez" onClick={() => handleBuyXTZ(e)}>
+                            <button
+                              className="tez"
+                              onClick={() => handleBuyXTZ(e)}
+                            >
                               {e.price / 1000000} XTZ
                             </button>
-                            <button className="orz" onClick={() => handleBuySPZ(e)}>
+                            <button
+                              className="orz"
+                              onClick={() => handleBuySPZ(e)}
+                            >
                               {e.price / 10000} SPZ
                             </button>
                           </div>
@@ -225,7 +274,7 @@ export default function Inventory() {
               </div>
             </div>
           </div>
-        }
+        )}
       </div>
     </div>
   );
