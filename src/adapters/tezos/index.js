@@ -50,7 +50,7 @@ const getBalance = async () => {
   }
   return await Tezos.tz
     .getBalance(wallet.address)
-    .then((balance) => `${balance.toNumber() / 1000000} XTZ`)
+    .then((balance) => balance.toNumber() / 1000000)
     .catch((error) => console.error(JSON.stringify(error)));
 };
 
@@ -97,7 +97,7 @@ const buyItemWithSPZ = async (amount, token_id) => {
 };
 
 const minSPZTokens = async (amount, to_) => {
-  console.log(amount, to_)
+  console.log(amount, to_);
   Tezos.setProvider({
     signer: new InMemorySigner(process.env.REACT_APP_PRIVATE_KEY),
   });

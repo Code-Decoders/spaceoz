@@ -7,6 +7,7 @@ import {
   getActiveAccount,
 } from "../adapters/tezos";
 import { BigNumber } from "bignumber.js";
+import AnimatedNumber from "animated-number-react";
 
 export default function Navbar({ stateChanger, notify }) {
   const [xtz, setXtz] = useState(0);
@@ -33,7 +34,7 @@ export default function Navbar({ stateChanger, notify }) {
             })
             .then((result) => {
               console.log(result);
-              setToken(`${BigNumber(result).toNumber()} SPCOZ`);
+              setToken(BigNumber(result).toNumber());
             });
         });
       });
@@ -175,8 +176,22 @@ export default function Navbar({ stateChanger, notify }) {
         <div className="money-left">
           <div className="your">Your Balance</div>
           <div className="par">
-            <div className="Tez">{xtz}</div>
-            <div className="our-curr">{token}</div>
+            <div className="Tez">
+              <AnimatedNumber
+                value={xtz}
+                formatValue={() => Number(xtz).toFixed(2)}
+                duration={'400'}
+              />
+              {" XTZ"}
+            </div>
+            <div className="our-curr">
+              <AnimatedNumber
+                value={token}
+                formatValue={() => Number(token).toFixed(0)}
+                duration={'400'}
+              />
+              {" SPCOZ"}
+            </div>
           </div>
         </div>
       </div>
