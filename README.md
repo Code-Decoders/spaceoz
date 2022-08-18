@@ -1,6 +1,6 @@
 # SpaceOz
 
-> SpaceOz is a community-led online play to earn gaming platform created by CodeDecoders for TezAsia Hackathon 2022.
+> SpaceOz is a community-led online "play-and-earn" gaming platform created by CodeDecoders for TezAsia Hackathon 2022.
 
 > Shoot asteroids and enemy ships to increase your score. The more you score the more tokens you will earn.
 > With your earned SPCOZ tokens, upgrade your ship, buy new ships and buy extra accessories for your ship.
