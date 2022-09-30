@@ -381,7 +381,7 @@ class TheInventoryFA2(sp.Contract):
         self.data.token_metadata[token_id] = sp.record(
             token_id=token_id, token_info=metadata
         )
-        sp.if ~self.data.ledger.contains(token_id):
+        with sp.if_(~self.data.ledger.contains(token_id)):
             self.data.ledger[token_id] = sp.set(l = [], t = sp.TAddress)
         self.data.ledger[token_id].add(to_)
         self.data.next_token_id += 1

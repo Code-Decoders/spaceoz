@@ -1,0 +1,11 @@
+Creating contract KT1TezoooozzSmartPyzzSTATiCzzzwwBFA1
+ -> (Pair (Pair "tz1QUYw77iqCsYUutxF511nhRhd1Z21YJKxU" (Pair {} {Elt "" 0x68747470733a2f2f6578616d706c652e636f6d})) (Pair 1 (Pair {} {})))
+ => spaceoz_contract/TheInventoryFA2/step_000_cont_0_storage.tz 1
+ => spaceoz_contract/TheInventoryFA2/step_000_cont_0_storage.json 13
+ => spaceoz_contract/TheInventoryFA2/step_000_cont_0_sizes.csv 2
+ => spaceoz_contract/TheInventoryFA2/step_000_cont_0_storage.py 1
+ => spaceoz_contract/TheInventoryFA2/step_000_cont_0_types.py 7
+ => spaceoz_contract/TheInventoryFA2/step_000_cont_0_metadata.metadata_base.json 145
+ => spaceoz_contract/TheInventoryFA2/step_000_cont_0_contract.tz 522
+ => spaceoz_contract/TheInventoryFA2/step_000_cont_0_contract.json 633
+ => spaceoz_contract/TheInventoryFA2/step_000_cont_0_contract.py 62
