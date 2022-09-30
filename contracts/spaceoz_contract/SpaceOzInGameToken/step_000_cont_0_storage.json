@@ -1,0 +1,54 @@
+{
+  "prim": "Pair",
+  "args": [
+    {
+      "prim": "Pair",
+      "args": [
+        { "string": "tz1QUYw77iqCsYUutxF511nhRhd1Z21YJKxU" },
+        {
+          "prim": "Pair",
+          "args": [
+            [
+              { "prim": "Elt", "args": [ { "prim": "Pair", "args": [ { "string": "tz1NLi5whLyUQFqry3o4QTKkStUASyiTBsPd" }, { "int": "0" } ] }, { "int": "2000" } ] },
+              { "prim": "Elt", "args": [ { "prim": "Pair", "args": [ { "string": "tz1QUYw77iqCsYUutxF511nhRhd1Z21YJKxU" }, { "int": "0" } ] }, { "int": "2000" } ] }
+            ],
+            [ { "prim": "Elt", "args": [ { "string": "" }, { "bytes": "68747470733a2f2f6578616d706c652e636f6d" } ] } ]
+          ]
+        }
+      ]
+    },
+    {
+      "prim": "Pair",
+      "args": [
+        { "prim": "Pair", "args": [ { "int": "0" }, [] ] },
+        {
+          "prim": "Pair",
+          "args": [
+            [ { "prim": "Elt", "args": [ { "int": "0" }, { "int": "2000" } ] } ],
+            [
+              {
+                "prim": "Elt",
+                "args": [
+                  { "int": "0" },
+                  {
+                    "prim": "Pair",
+                    "args": [
+                      { "int": "0" },
+                      [
+                        { "prim": "Elt", "args": [ { "string": "decimals" }, { "bytes": "31" } ] },
+                        { "prim": "Elt", "args": [ { "string": "name" }, { "bytes": "53706163654f7a20546f6b656e" } ] },
+                        { "prim": "Elt", "args": [ { "string": "price" }, { "bytes": "050000" } ] },
+                        { "prim": "Elt", "args": [ { "string": "symbol" }, { "bytes": "5350434f5a" } ] },
+                        { "prim": "Elt", "args": [ { "string": "url" }, { "bytes": "" } ] }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
