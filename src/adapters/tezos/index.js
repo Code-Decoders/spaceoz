@@ -3,10 +3,10 @@ import { MichelsonMap, TezosToolkit } from "@taquito/taquito";
 import { InMemorySigner, importKey } from "@taquito/signer";
 
 const DAPP_NAME = "SpaceOz";
-const RPC_URL = "https://jakartanet.smartpy.io";
-const NETWORK = "jakartanet";
-const IGT_CONTRACT_ADDRESS = "KT1GFjj3DCzzqAGP8nnt9Hm3rMtqem4KBAFp";
-const INVENTORY_CONTRACT_ADDRESS = "KT1AaQqifT3smqNGpPkBmPqXLQP8yGjqJr63";
+const RPC_URL = "https://ghostnet.smartpy.io";
+const NETWORK = "ghostnet";
+const IGT_CONTRACT_ADDRESS = "KT1TPAYYbTD7C232VH4iCoWC8VX8Qy7KPz7f";
+const INVENTORY_CONTRACT_ADDRESS = "KT1XrC8aj44ry1LJSW8UpmwJrLRm97TgrRBY";
 
 const Tezos = new TezosToolkit(RPC_URL);
 

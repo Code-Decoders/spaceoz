@@ -42,6 +42,7 @@ export default function Inventory() {
       var item = ids[id];
       var owners = await storage.ledger.get(`${item}`);
       var result = await meta.get(`${item}`);
+      console.log(result)
       const src = { bytes: result.token_info.get("price") };
       const typ = {
         prim: "nat",
