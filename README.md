@@ -108,7 +108,7 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
     
 ## Feedback & Contact
 
-If you have any feedback or contact, please reach out to us at maadhav2001@gmail.com
+If you have any feedback or contact, please reach out to us at info@codedecoder.io
 
 
 ## Authors
