@@ -5,7 +5,11 @@
 > Shoot asteroids and enemy ships to increase your score. The more you score the more tokens you will earn.
 > With your earned SPCOZ tokens, upgrade your ship, buy new ships and buy extra accessories for your ship.
 
- 
+## Inspiration
+
+> As blockchain programmers and gamers, we have long wished to create a project that would allow us to combine our respective strengths. After considering what Cosmos(EVMOS) offers, we considered combining the two.
+
+
 ## Features
 
 - Ability to buy new ships and bullet upgrades
