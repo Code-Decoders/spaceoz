@@ -21,11 +21,6 @@
 - Search for specific upgrades
 - Sort the upgrades based on their popularity, strengths and price
 
-## Deployed Smart Contracts
-
-- [The Inventory NFT Token](https://better-call.dev/jakartanet/KT1GFjj3DCzzqAGP8nnt9Hm3rMtqem4KBAFp)
-- [The SPCOZ In-Game-Token](https://better-call.dev/jakartanet/KT1AaQqifT3smqNGpPkBmPqXLQP8yGjqJr63)
-
 ## Demo
 
 Live Website (https://spaceoz.netlify.app/)
@@ -34,7 +29,10 @@ Youtube Video Demo
 
 [![Youtube Video](https://img.youtube.com/vi/onvs27YylLY/sddefault.jpg)](https://youtu.be/onvs27YylLY)
 
+## Deployed Smart Contracts
 
+- [The Inventory NFT Token](https://better-call.dev/jakartanet/KT1GFjj3DCzzqAGP8nnt9Hm3rMtqem4KBAFp)
+- [The SPCOZ In-Game-Token](https://better-call.dev/jakartanet/KT1AaQqifT3smqNGpPkBmPqXLQP8yGjqJr63)
 
 ## Tech Stack
 
